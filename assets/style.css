@@ -258,7 +258,7 @@ section[data-testid="stSidebar"] .stButton {
 /* pet corner */
 .pet-corner {
     position: fixed;
-    bottom: 40px;
+    bottom: 38px;
     right: -14px;
     z-index: 99999;
     display: flex;
