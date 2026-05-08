@@ -1,0 +1,16 @@
+streamlit
+langchain
+langchain-community
+langchain-google-genai
+langchain-text-splitters
+langchain-core
+langchain-openai
+faiss-cpu
+PyPDF2
+pdf2image
+pytesseract
+Pillow
+groq
+google-generativeai
+google-genai
+python-dotenv

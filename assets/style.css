@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Playfair Display', sans-serif;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.block-container {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #111111;
+    border-right: 1px solid #2a2a2a;
+}
+
+section[data-testid="stSidebar"] .block-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+section[data-testid="stSidebar"] .stMarkdown {
+    margin-bottom: 0;
+}
+
+section[data-testid="stSidebar"] hr {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+section[data-testid="stSidebar"] .stButton {
+    margin-bottom: 0;
+}
+
+/* sidebar title */
+.doc-title {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #f5a623, #ffbe55);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0;
+}
+
+.doc-subtitle {
+    font-size: 0.88rem;
+    color: #666;
+    margin-top: 2px;
+    margin-bottom: 8px;
+    font-weight: 300;
+}
+
+/* main header */
+/* main header */
+.main-header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a1f0e 50%, #1a1a1a 100%);
+    border-bottom: 1px solid #f5a623;
+    padding: 8px 24px;        /* reduce top/bottom padding */
+    margin-bottom: 20px;
+    margin-top: 0;            /* remove top margin */
+    border-radius: 0 0 12px 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.header-title {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 3.6rem;        /* increase from 2.4 to 3.2 */
+    font-weight: 800;
+    background: linear-gradient(90deg, #f5a623, #ffbe55);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
+}
+
+.header-sub {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+
+/* dashboard title */
+.dashboard-title {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 3.4rem;
+    font-weight: 800;
+    color: #f5a623;
+    border-left: 4px solid #f5a623;
+    padding-left: 12px;
+    margin-bottom: 4px;
+}
+
+/* section labels in sidebar — muted, not colorful */
+.section-label {
+    font-size: 0.78em;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    margin-top: 10px;
+}
+
+/* buttons */
+.stButton > button {
+    background-color: #2a2a2a;
+    color: #f5a623;
+    border: 1px solid #3a3a3a;
+    border-radius: 6px;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
+    padding: 6px 20px;
+    width: 100%;
+    min-height: 0;
+    transition: all 0.2s ease;
+    letter-spacing: 0.3px;
+}
+
+.stButton > button:hover {
+    background-color: #f5a623;
+    color: #111;
+    border-color: #f5a623;
+}
+
+.stButton > button[kind="primary"] {
+    background-color: #f5a623;
+    color: #111;
+    border: none;
+}
+
+/* chat input */
+.stChatInput textarea {
+    background-color: #242424;
+    border: 1.5px solid #333;
+    border-radius: 8px;
+    font-family: 'Playfair Display', sans-serif;
+    color: #e0e0e0;
+}
+
+/* chat messages */
+[data-testid="stChatMessage"] {
+    background-color: #242424;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 8px;
+    border: 1px solid #2e2e2e;
+}
+
+/* source box */
+.source-box {
+    background-color: #1e1e1e;
+    border-left: 3px solid #f5a623;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin: 6px 0;
+    font-size: 0.83em;
+    color: #aaa;
+    line-height: 1.5;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* stat cards */
+.stat-card {
+    background-color: #242424;
+    border: 1px solid #2e2e2e;
+    border-radius: 10px;
+    padding: 10px 8px;
+    margin-bottom: 8px;
+    border-top: 2px solid #f5a623;
+}
+
+.stat-label {
+    font-size: 0.68em;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.stat-value {
+    font-size: 1em;
+    font-weight: 600;
+    color: #f5a623;
+    margin-top: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* badges */
+.badge-ready {
+    background-color: #1a2a1a;
+    color: #4caf50;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.82em;
+    font-weight: 500;
+    display: inline-block;
+    border: 1px solid #2d5a3d;
+}
+
+.badge-empty {
+    background-color: #2a1a1a;
+    color: #ef5350;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.82em;
+    font-weight: 500;
+    display: inline-block;
+    border: 1px solid #5a2d2d;
+}
+
+/* top animated header bar */
+.top-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #f5a623, #ffbe55, #f5a623);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite linear;
+    z-index: 9999;
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #111111;
+    border-top: 1px solid #2a2a2a;
+    padding: 10px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    font-size: 0.75em;
+    color: #444;
+}
+
+/* pet corner */
+.pet-corner {
+    position: fixed;
+    bottom: 40px;
+    right: -14px;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+.pet-gif {
+    width: 80px;
+    height: 80px;
+    border-radius: 0;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.pet-bubble {
+    background-color: #242424;
+    border: 1px solid #f5a623;
+    color: #e0e0e0;
+    font-size: 0.7em;
+    padding: 4px 10px;
+    border-radius: 8px;
+    white-space: nowrap;
+    animation: fadeInOut 4s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    20%, 80% { opacity: 1; }
+}
+
+hr { border-color: #2a2a2a; }
+
+[data-testid="stFileUploader"] {
+    background-color: #242424;
+    border: 1.5px dashed #444;
+    border-radius: 10px;
+    padding: 10px;
+}
