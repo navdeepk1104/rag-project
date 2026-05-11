@@ -111,7 +111,7 @@ with st.sidebar:
         if st.button("Process PDF", key="process_btn"):
             # Only re-embed if vectorstore doesn't already exist
             # This avoids hitting API rate limits unnecessarily
-            if not os.path.exists("vectorstore/faiss_index/index.faiss"):
+            if not os.path.exists("/tmp/faiss_index/index.faiss"):
                 progress = st.progress(0, text="Reading PDF...")
                 pages = load_pdf_with_metadata("temp.pdf")
 
@@ -153,9 +153,8 @@ with st.sidebar:
     with col2:
         if st.button("New PDF", key="new_pdf_btn"):
             # Deletes the vectorstore so a new PDF can be indexed
-            if os.path.exists("vectorstore"):
-                shutil.rmtree("vectorstore")
-            st.session_state["pdf_processed"] = False
+            if os.path.exists("/tmp/faiss_index"):
+                shutil.rmtree("/tmp/faiss_index")
             st.session_state["messages"] = []
             st.session_state["pdf_name"] = "None"
             st.session_state["total_questions"] = 0

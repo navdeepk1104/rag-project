@@ -22,5 +22,5 @@ MAX_TOKENS = 1000
 TEMPERATURE = 0.2   #keeps answers factual, not creative. Perfect for Q&A
 CHUNK_SIZE = 3000    #too large = noisy answers, too small = loses context.
 CHUNK_OVERLAP = 400   #ensures a sentence cut at the edge of a chunk isn't lost
-VECTORSTORE_PATH = "vectorstore/faiss_index"
+VECTORSTORE_PATH = os.path.join("/tmp", "faiss_index")
 TOP_K_RESULTS = 8  #fetches top 4 most relevant chunks for every question
