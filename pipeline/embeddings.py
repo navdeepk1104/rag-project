@@ -58,7 +58,7 @@ def create_vectorstore(chunks: list[dict]):
         # small polite delay between every batch
         time.sleep(5)
 
-    os.makedirs(VECTORSTORE_PATH.split("/")[0], exist_ok=True)
+    os.makedirs(VECTORSTORE_PATH, exist_ok=True)
     vectorstore.save_local(VECTORSTORE_PATH)
     print(f"✅ Vectorstore saved to {VECTORSTORE_PATH}")
     return vectorstore
